@@ -212,20 +212,59 @@ $chevron_right_height: 400px;
                 font-size: 2em;
 
             }
+
+
+
             .filter_items {
                 margin:0 -10px;
 
-                .filter_item {
+                &.has_potential_filter_items {
+                    position: relative;
+
+
+                    .potential_filter_items {
+                        display: none;
+                        position: absolute;
+                        top:25px;
+                        background: transparentize(black,0.1);
+                        color: white;
+                        padding:10px;
+                        left:0;
+                        z-index: 100;
+                        .filter_item {
+                            display: block;
+                        }
+
+                        &.visible {
+                            display: block;
+                            font-size: 50%
+                        }
+                    }
+
+
+                }
+                .fake_filter_item {
+                    display: inline;
+                }
+
+                .filter_item, .current_filter_item {
                     font-size: 3em;
                     display: inline-block;
                     padding: 10px;
                     font-weight: bold;
                     transition: all 0.3s;
                     opacity: 0.8;
+                    cursor: pointer;
 
                     &:hover {
                         transform: scale(1.1);
                         opacity: 1;
+                    }
+
+                    &.selected {
+                        transform: scale(1.1);
+                        opacity: 1;
+                        color: $brand_color;
                     }
                 }
 

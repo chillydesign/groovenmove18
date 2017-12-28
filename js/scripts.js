@@ -31,15 +31,25 @@
         //
         var $single_events = $('.single_event');
         var $filter_items = $('.filter_item');
+        var $potential_filter_items = $('.potential_filter_items');
+        var $current_filter_item = $('.current_filter_item');
+        var $fake_filter_item = $('.fake_filter_item');
+
+        give_event_chevron_classes();
 
 
-            give_event_chevron_classes();
 
+        $current_filter_item.on('click', function(){
+            $potential_filter_items.toggleClass('visible');
+        });
 
         $filter_items.on('click', function(e){
-            var $this = $(this);
             e.preventDefault();
+            var $this = $(this);
             var $group = $this.data('group');
+            $filter_items.removeClass('selected')
+            $this.addClass('selected');
+
             if ($group) {
                 $single_events.each(function(index){
 
@@ -54,13 +64,25 @@
                 $single_events.removeClass('invisible_event');
             };
 
+            if ( $this.parent().hasClass('potential_filter_items') ) {
+                $fake_filter_item.html($this.html());
+                $potential_filter_items.toggleClass('visible');
+            }
+
+
             give_event_chevron_classes();
         })
 
 
+
+
+
+
+
+
+
         function give_event_chevron_classes() {
 
-            console.log('give_event_chevron_classes');
             var ev_ind = 0;
             var single_events = $('.single_event');
 
@@ -107,9 +129,12 @@
 
                     ev_ind++;
                 }
+
+
+
             });
 
-        }
+        } // end of give_event_chevron_classes
 
 
 
