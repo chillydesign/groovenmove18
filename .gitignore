@@ -4,3 +4,5 @@ yarn.lock
 package-lock.json
 /css
 css/global.css
+/js/min
+/js/min/*
