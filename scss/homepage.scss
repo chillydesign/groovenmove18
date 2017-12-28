@@ -274,6 +274,7 @@ $event_transition_time: 0.5s;
     margin: 50px 0;
     display: flex;
     flex-wrap: wrap;
+    min-height: 400px;
 
     .single_event {
 
@@ -288,7 +289,18 @@ $event_transition_time: 0.5s;
         margin: 0 0 30px;
         clip-path: polygon(90% 0, 90% 50%, 90% 100%, 10% 100%, 10% 50%, 10% 0);
         //clip-path: polygon(85% 0%, 100% 50%, 85% 100%, 0% 100%, 15% 50%, 0% 0%);
+        display: inline-block;
+        opacity: 1;
         animation: growChevron 1s forwards;
+        transition: all 1s;
+
+        &.invisible_event {
+            width: 0;
+            max-width: 0;
+        //    transform: scaleX(0) translateX(0) !important;
+            opacity: 0;
+
+        }
 
         @media (min-width: 768px) {
             width: #{100% / 2};
@@ -408,25 +420,6 @@ $event_transition_time: 0.5s;
 
 
 
-
-
-    //
-    // &.event_row_alternate {
-    //     .single_event {
-    //         animation: growChevronAlternative 1.5s forwards;
-    //         animation-delay:0.5s;
-    //
-    //         .event_text {
-    //             h3, p {
-    //                 padding: 0 20px 0 40px;
-    //
-    //                 &.event_excerpt {
-    //                     padding: 0 60px 0 40px;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // } // end of .event_row_alternate
 
 
 

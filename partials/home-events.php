@@ -16,20 +16,20 @@
                 <div class="filter_container">
                     <h4>Feb</h4>
                     <div class="filter_items">
-                        <div class="filter_item">24</div>
-                        <div class="filter_item">25</div>
-                        <div class="filter_item">26</div>
-                        <div class="filter_item">27</div>
+                        <div data-group="24/02/2018" class="filter_item">24</div>
+                        <div data-group="25/02/2018" class="filter_item">25</div>
+                        <div data-group="26/02/2018" class="filter_item">26</div>
+                        <div data-group="27/02/2018" class="filter_item">27</div>
                     </div>
 
                 </div>
                 <div class="filter_container">
                     <h4>Mar</h4>
                     <div class="filter_items">
-                        <div data-date="01/03/2018" class="filter_item">1</div>
-                        <div data-date="02/03/2018" class="filter_item">2</div>
-                        <div data-date="03/03/2018" class="filter_item">3</div>
-                        <div data-date="04/03/2018" class="filter_item">4</div>
+                        <div data-group="01/03/2018" class="filter_item">1</div>
+                        <div data-group="02/03/2018" class="filter_item">2</div>
+                        <div data-group="03/03/2018" class="filter_item">3</div>
+                        <div data-group="04/03/2018" class="filter_item">4</div>
                     </div>
 
                 </div>
@@ -60,12 +60,13 @@
                 <?php $event_id = get_the_ID(); ?>
                 <?php $image = thumbnail_of_post_url(  $event_id , 'medium' ); ?>
                 <?php $dates = (get_field('dates', $event_id)) ?  get_field('dates', $event_id) : array();  ?>
-                <?php $date_text = array();  ?>
+                <?php $date_text = array();   ?>
                 <?php foreach ($dates as $date) {
                     array_push($date_text, $date['date']);
-                } ?>
+                }; ?>
+                <?php $groups = $date_text;  array_push($groups, 'something');  ?>
 
-                <a href="<?php echo get_the_permalink(); ?>" data-date="<?php echo implode('|', $date_text) ?>"  class="single_event <?php echo $event_classes; ?>" style="background-image:url(<?php echo $image; ?>)">
+                <a href="<?php echo get_the_permalink(); ?>" data-groups='["<?php echo implode('","', $groups) ?>"]'  class="single_event  <?php // echo $event_classes; ?>" style="background-image:url(<?php echo $image; ?>)">
                     <div class="event_text">
                         <h3><?php echo get_the_title(); ?></h3>
                         <p class="event_date"><?php echo implode(',', $date_text) ?></p>
