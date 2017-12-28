@@ -1,0 +1,74 @@
+
+$footer_padding: 35px;
+footer {
+    background: $dark_grey;
+    padding: $footer_padding 0 0;
+    margin:20px 0 0;
+    color: white;
+
+    img {
+        width: 60%;
+        height: auto;
+        margin:0 20% $footer_padding;
+    }
+
+    p {
+        padding: 0 ;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 0 0 20px;
+
+
+
+
+        input {
+            flex:0 0 auto;
+            margin: 10px 0 0;
+            width: 70%;
+
+            &#subscribe_button {
+                width: 29%;
+
+            }
+        }
+    }
+
+
+
+    p#copyright {
+        border-top: 10px solid $brand_color;
+        margin: 0;
+        padding: 15px 0;
+        text-align: center;
+        color: white;
+        background: $black;
+        text-transform: uppercase;
+    }
+}
+
+
+#bg_chevron_1 , #bg_chevron_2 {
+    position: fixed;
+    z-index: -1;
+    bottom: 20px;
+    width: 50%;
+    height: 600px;
+    left:0;
+    background: url('../img/chevrons_2r_1f.svg') no-repeat left bottom;
+    background-size:contain;
+    opacity: 0.5;
+
+
+    &#bg_chevron_2 {
+        left: auto;
+        right:0;
+        background-image: url('../img/chevrons_2l_1f.svg');
+        background-position: right bottom;
+        height: 450px;
+    }
+
+}

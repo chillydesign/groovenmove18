@@ -1,0 +1,28 @@
+
+
+
+
+@import "variables";
+@import "reset";
+@import "typography";
+
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: $font_stack;
+    color: $font_color;
+    background-color: $background_color;
+    font-size: 62.5%;
+}
+
+
+@import "header";
+@import "footer";
+@import "social_bar";
+@import "homepage";
+@import "events";

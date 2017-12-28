@@ -1,0 +1,43 @@
+article {
+
+
+    header.event_header {
+
+            background: no-repeat center center;
+            background-size: cover;
+            min-height: 400px;
+            position: relative;
+            margin-bottom: 100px;
+            overflow: hidden;
+
+
+
+        .event_title {
+
+            position: absolute;
+            //
+             bottom: 00px;
+             width: 100%;
+             left: 0;
+             background: black;
+             padding:30px 0;
+            // border-top: 10px solid $brand_color;
+            // border-bottom: 10px solid $brand_color;
+            // width: 100%;
+            // padding-left:60%;
+            // transform: translateX(-30%);
+            color: $brand_color;
+
+
+            h1  {
+
+            }
+
+             p {
+
+             }
+        }
+
+    }
+
+}

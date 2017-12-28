@@ -1,0 +1,52 @@
+@import "variables.scss";
+
+
+
+h2 {
+    font-size: 5.5em;
+    margin: 0 0 30px;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+
+
+p  {
+    font-size: 1.4em;
+    line-height: 160%;
+    padding:0 0 30px;
+}
+
+li {
+    font-size: 1.7em;
+    line-height: 150%;
+}
+
+a {
+
+    text-decoration: none;
+    transition: all 0.3s;
+    color: $brand_color;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+// forms
+form {}
+input, textarea {
+    padding: 10px;
+    background: white;
+    border: 0;
+    border-radius: 10px;
+
+    &.submit_button {
+        text-transform: uppercase;
+        color:black;
+        background: $brand_color;
+    }
+}
