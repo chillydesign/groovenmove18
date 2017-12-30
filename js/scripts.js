@@ -1,4 +1,4 @@
-// import Shuffle from '../node_modules/shufflejs/dist/shuffle.min.js';
+import slick from '../node_modules/slick-carousel/slick/slick.min.js';
 
 (function ($, root, undefined) {
 
@@ -6,6 +6,31 @@
 
         'use strict';
 
+
+
+        /////////////////////////////////////////////////////////
+        /// GALLERY
+        /// GALLERY
+        /// GALLERY
+        var $gallery_sliders = $(".gallery_slider");
+        $gallery_sliders.slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: true
+        });
+
+        /// END OF GALLERY
+        /// END OF GALLERY
+        /// END OF GALLERY
+
+
+        /////////////////////////////////////////////////////////
+        /// HOME PAGE SEARCH
+        /// HOME PAGE SEARCH
+        /// HOME PAGE SEARCH
 
         $('.single_event').on('mouseover', function(e) {
             var $this = $(this);
@@ -19,13 +44,6 @@
             $this.removeClass('hovered');
         });
 
-
-
-
-
-        /// HOME PAGE SEARCH
-        /// HOME PAGE SEARCH
-        /// HOME PAGE SEARCH
 
         var $single_events = $('.single_event');
         var $filter_items = $('.filter_item');
@@ -122,11 +140,11 @@
         ///// END OF HOME PAGE EVENTS SEARCH
         ///// END OF HOME PAGE EVENTS SEARCH
         ///// END OF HOME PAGE EVENTS SEARCH
+        /////////////////////////////////////////////////////////
 
 
 
-
-
+        /////////////////////////////////////////////////////////
         //// MAPS CONTAINER
         //// MAPS CONTAINER
         //// MAPS CONTAINER
@@ -170,7 +188,7 @@
         //// END OF MAPS CONTAINER
         //// END OF MAPS CONTAINER
         //// END OF MAPS CONTAINER
-
+        /////////////////////////////////////////////////////////
 
 
     });

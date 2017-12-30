@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/chillydesign/groovenmove18#readme",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

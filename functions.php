@@ -30,6 +30,7 @@ if (function_exists('add_theme_support'))
     add_image_size('large', 1600, '', true); // Large Thumbnail
     add_image_size('medium', 800, '', true); // Medium Thumbnail
     add_image_size('small', 400, '', true); // Small Thumbnail
+    add_image_size('small_height', '', '400', true); // Small Thumbnail
     add_image_size('square', 200, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use

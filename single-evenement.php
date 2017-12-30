@@ -45,7 +45,7 @@
                     <div class="col-sm-8">
 
 
-                                    <?php the_content(); // Dynamic Content ?>
+                        <?php get_template_part( 'section-loop' ); ?>
 
 
 

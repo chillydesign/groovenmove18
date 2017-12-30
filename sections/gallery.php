@@ -2,14 +2,12 @@
 
 
 
-<ul class="gallery_images clearfix">
+<ul class="gallery_slider ">
 	<?php  foreach ($images as $image) : ?>
-	<li  class="gallery_image"> 
-		<a class="gallery"  href="<?php echo $image['sizes']['large']; ?>"><img src="<?php echo $image['sizes']['thumbnail']; ?>"  alt="" /></a>
+	<li  class="gallery_image">
+		 <a class=""  href="<?php echo $image['sizes']['large']; ?>">
+            <img src="<?php echo $image['sizes']['small_height']; ?>"  alt="" />
+         </a>
 	</li>
 	<?php endforeach; ?>
 </ul>
-
-<!-- 
-<div class="container">
-</div> -->

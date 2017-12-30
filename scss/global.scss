@@ -20,6 +20,9 @@ body {
     font-size: 62.5%;
 }
 
+section {
+    padding: 0 0 50px;
+}
 
 @import "header";
 @import "footer";
@@ -27,3 +30,5 @@ body {
 @import "homepage";
 @import "events";
 @import "map";
+@import '../node_modules/slick-carousel/slick/slick.scss';
+@import "slider";

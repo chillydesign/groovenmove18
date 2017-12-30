@@ -25,8 +25,7 @@
         'supports' => array(
             'title',
             'thumbnail',
-            'excerpt',
-            'editor'
+            'excerpt'
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(
