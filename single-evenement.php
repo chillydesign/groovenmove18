@@ -11,7 +11,11 @@
         <?php $sous_titre = get_field('sous_titre'); ?>
         <?php $time = get_field('heure'); ?>
         <?php $location = get_field('lieu'); ?>
-        <?php $location_title = $location->post_title; ?>
+        <?php if ($location) {
+            $location_title = $location->post_title;
+          } else {
+            $location_title = '';} 
+        ?>
         <?php $dates = (get_field('dates', $event_id)) ?  get_field('dates', $event_id) : array();  ?>
         <?php $date_text = array();  ?>
         <?php foreach ($dates as $date) array_push($date_text, $date['date']);  ?>
