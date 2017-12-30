@@ -10,16 +10,16 @@
         <?php $category = the_category(','); ?>
         <?php $sous_titre = get_field('sous_titre'); ?>
         <?php $time = get_field('heure'); ?>
+        <?php $tarifs = get_field('tarifs'); ?>
         <?php $location = get_field('lieu'); ?>
-        <?php if ($location) {
-            $location_title = $location->post_title;
-          } else {
-            $location_title = '';} 
-        ?>
         <?php $dates = (get_field('dates', $event_id)) ?  get_field('dates', $event_id) : array();  ?>
         <?php $date_text = array();  ?>
         <?php foreach ($dates as $date) array_push($date_text, $date['date']);  ?>
-
+        <?php $event_metas = array(); ?>
+        <?php if ($location)  array_push( $event_metas, $location->post_title  ); ?>
+        <?php if (sizeof($date_text) > 0)  array_push( $event_metas,  implode(',' ,  $date_text)); ?>
+        <?php if ($time) array_push( $event_metas, $time); ?>
+        <?php if ($sous_titre) array_push( $event_metas, $sous_titre); ?>
 
         <!-- article -->
         <article>
@@ -28,10 +28,41 @@
                 <div class="event_title">
                     <div class="container">
                         <h1><?php the_title(); ?></h1>
-                        <p><?php echo $category; ?>  - <?php echo $location_title; ?>  - <?php echo implode(',' ,  $date_text); ?>  - <?php echo $time; ?></p>
+                        <p><?php echo implode(' - ', $event_metas); ?></p>
                     </div>
                 </div>
             </header>
+
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-8">
+
+
+
+                    </div>
+                    <div class="col-sm-4">
+                        <?php if ($location): ?>
+                            <?php $location_id = $location->ID;   ?>
+                            <?php $address = get_field( 'address', $location_id ); ?>
+                            <h3><i class="fa fa-map-marker"></i> <?php echo $location->post_title; ?></h3>
+                            <p><?php echo $address; ?></p>
+                            <div id="map_container"></div>
+                            <script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyC-BDJZU14ltCrYRPei33a4ZSQfJqRbxNY&#038;ver=4.8.1'></script>
+                            <script type="text/javascript">
+                                var place_location = '<?php echo $address //TODO replace any ; ?>';
+                            </script>
+                            <hr/>
+                        <?php endif; ?>
+                        <?php if ($tarifs): ?>
+                            <h3><i class="fa fa-ticket"></i> Tarifs</h3>
+                            <?php echo $tarifs; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
 
 
             <?php the_content(); // Dynamic Content ?>

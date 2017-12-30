@@ -1,6 +1,15 @@
 @import "variables.scss";
 
 
+h1,h2,h3,h4,h5 {
+    font-family: $heading_font_stack;
+}
+
+
+h1 {
+    font-size: 4em;
+    margin: 0 0 20px;
+}
 
 h2 {
     font-size: 5.5em;
@@ -9,6 +18,7 @@ h2 {
 
 h3 {
     font-size: 2em;
+    margin: 0 0 20px;
 }
 
 
@@ -35,6 +45,15 @@ a {
     }
 }
 
+
+hr {
+    border:0;
+    border-top: 4px solid $brand_color;
+    outline:0;
+    appearance: none;
+    margin:30px 0;
+    padding: 0;
+}
 
 // forms
 form {}

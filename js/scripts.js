@@ -23,12 +23,10 @@
 
 
 
+        /// HOME PAGE SEARCH
+        /// HOME PAGE SEARCH
+        /// HOME PAGE SEARCH
 
-        // var shuffle_container = document.querySelector('.events_container');
-        // var shuffleInstance = new Shuffle(shuffle_container, {
-        //     itemSelector: '.single_event'
-        // });
-        //
         var $single_events = $('.single_event');
         var $filter_items = $('.filter_item');
         var $potential_filter_items = $('.potential_filter_items');
@@ -36,9 +34,6 @@
         var $fake_filter_item = $('.fake_filter_item');
 
         give_event_chevron_classes();
-
-
-
         $current_filter_item.on('click', function(){
             $potential_filter_items.toggleClass('visible');
         });
@@ -68,18 +63,8 @@
                 $fake_filter_item.html($this.html());
                 $potential_filter_items.toggleClass('visible');
             }
-
-
             give_event_chevron_classes();
         })
-
-
-
-
-
-
-
-
 
         function give_event_chevron_classes() {
 
@@ -123,8 +108,6 @@
                         classes.push('se_xs_flip');
                     }
 
-                    console.log(classes);
-
                     single_event.addClass( classes.join('  ') );
 
                     ev_ind++;
@@ -135,6 +118,58 @@
             });
 
         } // end of give_event_chevron_classes
+
+        ///// END OF HOME PAGE EVENTS SEARCH
+        ///// END OF HOME PAGE EVENTS SEARCH
+        ///// END OF HOME PAGE EVENTS SEARCH
+
+
+
+
+
+        //// MAPS CONTAINER
+        //// MAPS CONTAINER
+        //// MAPS CONTAINER
+        if (typeof place_location !== 'undefined') {
+
+            var map_theme = [{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}];
+
+
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({'address': place_location}, function(results, status) {
+                if (status === 'OK') {
+                    if (results.length > 0) {
+                        var position = results[0].geometry.location ;
+                        var location_map_container = $('#map_container');
+                        var map_options = {
+                             zoom: 16,
+                             mapTypeControl: true,
+                             scrollwheel: false,
+                             draggable: true,
+                             navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+                             mapTypeId: google.maps.MapTypeId.ROADMAP,
+                             styles: map_theme,
+                             center: position
+                         };
+                        var location_map = new google.maps.Map(location_map_container.get(0), map_options);
+                        var marker = new google.maps.Marker({
+                            position: position,
+                            map: location_map,
+                            optimized: false
+                        });
+
+                    }
+                } else {
+                    console.log('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+
+
+
+        }
+        //// END OF MAPS CONTAINER
+        //// END OF MAPS CONTAINER
+        //// END OF MAPS CONTAINER
 
 
 
