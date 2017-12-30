@@ -27,8 +27,12 @@
             <header  class="event_header"  style="background-image:url(<?php echo $image; ?>);">
                 <div class="event_title">
                     <div class="container">
+                        <div class="row">
+                        <div class="col-sm-8">
                         <h1><?php the_title(); ?></h1>
                         <p><?php echo implode(' - ', $event_metas); ?></p>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -39,6 +43,9 @@
                 <div class="row">
 
                     <div class="col-sm-8">
+
+
+                                    <?php the_content(); // Dynamic Content ?>
 
 
 
@@ -63,9 +70,6 @@
                     </div>
                 </div>
             </div>
-
-
-            <?php the_content(); // Dynamic Content ?>
 
 
 
