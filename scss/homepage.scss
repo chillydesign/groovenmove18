@@ -210,6 +210,7 @@ $chevron_right_height: 400px;
             h4 {
                 color: $medium_grey;
                 font-size: 2em;
+                font-family: $font_stack;
 
             }
 
@@ -368,6 +369,7 @@ $event_transition_time: 0.5s;
 
             h3 {
                 padding: 0 20px;
+                margin: 0;
             }
             p {
                 padding: 0 20px;
