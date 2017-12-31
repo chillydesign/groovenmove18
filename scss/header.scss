@@ -24,6 +24,22 @@ nav {
                       background-color: $black;
                   }
               }
+              &.branding {
+                  a {
+                      text-indent: -9999px;
+                      background-image: url('../img/logo_black.svg');
+                      background-repeat: no-repeat;
+                      background-position: center center;
+                      background-size: 80px;
+                      width: 100px;
+
+                      &:hover {
+                           background-image: url('../img/logo.svg');
+                      }
+
+
+                  }
+              }
          }
      }
 }

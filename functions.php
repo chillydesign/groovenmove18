@@ -416,27 +416,13 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 
 function chilly_nav($menu){
 
-    wp_nav_menu(
-    array(
-        'theme_location'  => $menu,
-        'menu'            => '',
-        'container'       => 'div',
-        'container_class' => 'menu-{menu slug}-container',
-        'container_id'    => '',
-        'menu_class'      => 'menu',
-        'menu_id'         => '',
-        'echo'            => true,
-        'fallback_cb'     => 'wp_page_menu',
-        'before'          => '',
-        'after'           => '',
-        'link_before'     => '',
-        'link_after'      => '',
-        'items_wrap'      => '%3$s',
-        'depth'           => 0,
-        'walker'          => ''
-        )
-    );
-
+    $items =  wp_get_nav_menu_items($menu);
+    $str = '';
+    foreach ($items as $item ) {
+        $link = get_page_link($item->object_id);
+        $str .= '<li><a title="'. $item->title  .'" href="'. $link  .'">'. $item->title  .'</a></li>' . "\n";
+    }
+    echo $str;
 }
 
 function chilly_map( $atts, $content = null ) {

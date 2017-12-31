@@ -1,8 +1,9 @@
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
+    <?php $blog_name =  get_bloginfo('name'); ?>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+    <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php echo $blog_name; ?></title>
 
         <link href="//www.google-analytics.com" rel="dns-prefetch">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
@@ -21,19 +22,22 @@
 
         <nav>
             <ul>
+                <?php if( !is_front_page() ) : ?>
+                    <li class="branding"><a href="<?php echo get_home_url(); ?>"><?php echo $blog_name; ?></a></li>
+                <?php endif; ?>
                 <?php chilly_nav('primary-navigation'); ?>
             </ul>
         </nav>
 
 
 
-    <!--
-<header class="header" id="header">
-<div class="container">
+        <!--
+        <header class="header" id="header">
+        <div class="container">
 
-<a href="<?php echo home_url(); ?>" class="branding"><?php bloginfo('name'); ?></a>
+        <a href="<?php echo home_url(); ?>" class="branding"><?php bloginfo('name'); ?></a>
 
-<a href="#" id="menu_button" >Menu</a>
-</div>
+        <a href="#" id="menu_button" >Menu</a>
+    </div>
 </header>
 -->

@@ -30,7 +30,7 @@ $social_bar_width: 50px;
                 background: $brand_color;
                 font-size: 0.6em;
                 padding: 6px;
-                top: 13px;
+                top: 8px;
                 border-radius: 4px  0 0 4px;
                 text-align: right;
                 display: none;
@@ -64,9 +64,15 @@ $social_bar_width: 50px;
                 color: white;
                 padding:10px 20px;
                 border: 0;
-                text-indent: -9999px;
+
                 background: no-repeat center center;
                 background-size: 27px;
+
+                span {
+                        text-indent: -9999px;
+                        display: block;
+                        height: 0;
+                }
 
                 &:hover {
                     background-color: $brand_color;
@@ -74,22 +80,28 @@ $social_bar_width: 50px;
                 }
             }
 
+            &#social_tickets {
+                a {
+                    background-color: $brand_color;
+                    color: black;
+                }
+            }
 
-            &#social_facebook {
-                a {
-                    background-image: url('../img/facebook.svg');
-                }
-            }
-            &#social_twitter {
-                a {
-                    background-image: url('../img/twitter.svg');
-                }
-            }
-            &#social_instagram {
-                a {
-                    background-image: url('../img/instagram.svg');
-                }
-            }
+            // &#social_facebook {
+            //     a {
+            //         background-image: url('../img/facebook.svg');
+            //     }
+            // }
+            // &#social_twitter {
+            //     a {
+            //         background-image: url('../img/twitter.svg');
+            //     }
+            // }
+            // &#social_instagram {
+            //     a {
+            //         background-image: url('../img/instagram.svg');
+            //     }
+            // }
 
 
 

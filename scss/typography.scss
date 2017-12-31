@@ -68,5 +68,12 @@ input, textarea {
         text-transform: uppercase;
         color:black;
         background: $brand_color;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            background: lighten($brand_color, 28);
+
+        }
     }
 }
