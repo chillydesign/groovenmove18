@@ -6,8 +6,6 @@ import slick from '../node_modules/slick-carousel/slick/slick.min.js';
 
         'use strict';
 
-
-
         /////////////////////////////////////////////////////////
         /// GALLERY
         /// GALLERY
@@ -19,7 +17,7 @@ import slick from '../node_modules/slick-carousel/slick/slick.min.js';
             speed: 300,
             slidesToShow: 1,
             centerMode: false,
-            variableWidth: true
+            variableWidth: false
         });
 
         /// END OF GALLERY

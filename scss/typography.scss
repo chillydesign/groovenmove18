@@ -13,13 +13,13 @@ h1 {
 }
 
 h2 {
-    font-size: 5.5em;
-    margin: 0 0 30px;
+    font-size: 2em;
+    margin: 0 0 20px;
 }
 
 h3 {
     font-size: 2em;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
 }
 
 
@@ -29,6 +29,9 @@ p  {
     line-height: 160%;
     padding:0 0 30px;
 }
+
+strong {font-weight: bold;}
+em {font-style: italic;}
 
 li {
     font-size: 1.6em;

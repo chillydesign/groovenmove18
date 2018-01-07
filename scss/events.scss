@@ -1,21 +1,21 @@
 article {
-
+$event_title_padding: 30px;
 
     header.event_header {
 
         background: no-repeat center center;
         background-size: cover;
         position: relative;
-        margin-bottom: 150px;
+        margin-bottom: 130px;
         padding:300px 0 0;
 
         .event_title {
 
             position: relative;
-            padding: 30px 0;
+            padding: $event_title_padding 0;
             bottom: -70px;
             color: $brand_color;
-            &:after {
+            &:before {
                 position: absolute;
                 bottom: 0;
                 top:0;
@@ -26,34 +26,69 @@ article {
                 border-bottom: 10px solid $brand_color;
 
                 z-index: 1;
-                background:   url('../img/chevrons_2r_1f.svg') no-repeat 10px center black ;
+                background:   url('../img/chevrons_2r_1f.svg.bak') no-repeat 10px center black ;
                 background-size: 100px;
                 @media (min-width: 768px) {
-                    width: calc( #{100% / 6} +  #{750px * 2/3}  );
+                    width: calc( 50vw +  #{750px / 6}  );
                 }
                 @media (min-width: 992px) {
-                    width: calc( #{100% / 6} +  #{970px * 2/3}  );
+                    width: calc( 50vw +  #{970px / 6}  );
                 }
                 @media (min-width: 1200px) {
-                    width: calc( #{100% / 6} +  #{1170px * 2/3}  );
+                    width: calc( 50vw +  #{1170px / 6}  );
                 }
 
             }
-
             h1  {
                 position: relative;
                 z-index: 2;
+                font-size: 3em;
+                margin-bottom: 6px;
             }
 
             p {
                 text-transform: uppercase;
                 position: relative;
                 z-index: 2;
+                padding-bottom: 0;
+                span.subtitle {
+                    text-transform: none;
+                }
+            }
+            .endpoint {
+              position: absolute;
+              top: #{-1 * $event_title_padding};
+              right: -52px;
+              z-index: 2;
+              bottom: #{-1 * $event_title_padding};
+
+            }
+
+            .floatleftdiv {
+                display: inline-block;
+                position: absolute;
+                z-index: 9;
+                width: 70px;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            .floatrightdiv {
+                display: inline-block;
+                margin-left: 80px;
             }
         }
 
 
 
     }
+
+    li.gallery_image div {
+    height: 420px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 }

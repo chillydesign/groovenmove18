@@ -21,8 +21,11 @@ body {
 }
 
 section {
-    padding: 0 0 50px;
+    padding: 0 0 30px;
 }
+
+iframe {width: 100%;}
+
 
 @import "header";
 @import "footer";
@@ -32,3 +35,4 @@ section {
 @import "map";
 @import '../node_modules/slick-carousel/slick/slick.scss';
 @import "slider";
+@import "tpg";
