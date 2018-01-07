@@ -72,3 +72,9 @@ footer {
     }
 
 }
+
+body.browser_ie_or_edge.home {
+    #bg_chevron_1 , #bg_chevron_2 {
+    display: none;
+    }
+}
