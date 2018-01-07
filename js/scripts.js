@@ -4,7 +4,17 @@ import slick from '../node_modules/slick-carousel/slick/slick.min.js';
 
     $(function () {
 
+
+
+
         'use strict';
+
+        // ADD CLASS TO BODY IF IE OR Edge
+        if (isBrowserIE() ) {
+            $('body').addClass('browser_ie_or_edge');
+        };
+
+
 
         /////////////////////////////////////////////////////////
         /// GALLERY
@@ -187,6 +197,21 @@ import slick from '../node_modules/slick-carousel/slick/slick.min.js';
         //// END OF MAPS CONTAINER
         //// END OF MAPS CONTAINER
         /////////////////////////////////////////////////////////
+
+
+
+        function isBrowserIE() {
+            if (/MSIE 10/i.test(navigator.userAgent)) {
+                return true;
+            } else if (/MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent)) {
+                return true;
+            } else if (/Edge\/\d./i.test(navigator.userAgent)){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
 
 
     });

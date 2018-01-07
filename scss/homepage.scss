@@ -290,6 +290,8 @@ $excerpt_height: 200px;
 $event_text_padding: 20px;
 $event_transition_time: 0.5s;
 
+
+
 @keyframes growChevron {
     from {
         clip-path: polygon(90% 0, 90% 50%, 90% 100%, 10% 100%, 10% 50%, 10% 0);
@@ -328,7 +330,6 @@ $event_transition_time: 0.5s;
         overflow: hidden;
         margin: 0 0 30px;
         clip-path: polygon(90% 0, 90% 50%, 90% 100%, 10% 100%, 10% 50%, 10% 0);
-        //clip-path: polygon(85% 0%, 100% 50%, 85% 100%, 0% 100%, 15% 50%, 0% 0%);
         display: inline-block;
         opacity: 1;
         animation: growChevron 1s forwards;
@@ -461,6 +462,35 @@ $event_transition_time: 0.5s;
 
 
 
+
+
+
+
+}
+
+
+body.browser_ie_or_edge {
+
+
+    .events_container {
+        .single_event {
+            transform: translate(0) !important;
+            // TO DO  ONLY IF IE
+            .single_event_inner {
+                position: absolute;
+                bottom: 0;
+                top:0;
+                left: 0px;
+                right: 0px;
+                z-index: 19;
+                height: 100%;
+                background: url('../img/chevron_bg.svg');
+                background-size: 100% 100%;
+            }
+
+        }
+
+    }
 
 
 
