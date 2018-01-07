@@ -16,27 +16,27 @@
                 <div class="filter_container">
                     <h4>Feb</h4>
                     <div class="filter_items">
-                        <div class="filter_item" data-group="24/02/2018">24</div>
-                        <div class="filter_item" data-group="25/02/2018">25</div>
-                        <div class="filter_item" data-group="26/02/2018">26</div>
-                        <div class="filter_item" data-group="27/02/2018">27</div>
+                        <div class="filter_item" data-group="2018-02-24">24</div>
+                        <div class="filter_item" data-group="2018-02-25">25</div>
+                        <div class="filter_item" data-group="2018-02-26">26</div>
+                        <div class="filter_item" data-group="2018-02-27">27</div>
                     </div>
 
                 </div>
                 <div class="filter_container">
                     <h4>Mar</h4>
                     <div class="filter_items">
-                        <div class="filter_item" data-group="01/03/2018">1</div>
-                        <div class="filter_item" data-group="02/03/2018">2</div>
-                        <div class="filter_item" data-group="03/03/2018">3</div>
-                        <div class="filter_item" data-group="04/03/2018">4</div>
+                        <div class="filter_item" data-group="2018-03-01">1</div>
+                        <div class="filter_item" data-group="2018-03-02">2</div>
+                        <div class="filter_item" data-group="2018-03-03">3</div>
+                        <div class="filter_item" data-group="2018-03-04">4</div>
                     </div>
 
                 </div>
                 <div class="filter_container">
                     <h4>Cateogie</h4>
                     <div class="filter_items has_potential_filter_items">
-                        <div class="current_filter_item"><div class="fake_filter_item">Toutes </div>&#9660;</div> 
+                        <div class="current_filter_item"><div class="fake_filter_item">Toutes </div>&#9660;</div>
                         <div class="potential_filter_items">
                             <div class="filter_item">Toutes</div>
                             <div class="filter_item" data-group="jiving">jiving</div>
@@ -61,18 +61,22 @@
 
             <?php $ev = 0; while($events->have_posts()) : $events->the_post();  ?>
 
-                <?php // $event_classes = get_event_chevron_classes($ev); ?>
+                <?php // $event_classes = get_event_chevron_classes($ev); // do this with js now ?>
 
                 <?php $event_id = get_the_ID(); ?>
                 <?php $categories = get_the_terms($event_id, 'event_cat'); ?>
                 <?php $categories_text =  array_map(function($cat) { return $cat->slug; },  $categories  )  ; ?>
                 <?php $image = thumbnail_of_post_url(  $event_id , 'medium' ); ?>
                 <?php $dates = (get_field('dates', $event_id)) ?  get_field('dates', $event_id) : array();  ?>
-                <?php $date_text = array();   ?>
+                <?php $date_text = array(); $dates_as_date = array();  setlocale(LC_TIME, 'fr_FR.UTF-8');   ?>
                 <?php foreach ($dates as $date) {
-                    array_push($date_text, $date['date']);
+                    $date_timestamp = strtotime( $date['date'] );
+                    $date_as_date = strftime('%Y-%m-%d', $date_timestamp);
+                    $date_as_text = strftime('%A %d %B', $date_timestamp);
+                    array_push($dates_as_date, $date_as_date);
+                    array_push($date_text, $date_as_text);
                 }; ?>
-                <?php $groups =  array_merge($date_text, $categories_text  );  ?>
+                <?php $groups =  array_merge($dates_as_date, $categories_text  );  ?>
 
                 <a href="<?php echo get_the_permalink(); ?>" data-groups='["<?php echo implode('","', $groups) ?>"]'  class="single_event  <?php // echo $event_classes; ?>" style="background-image:url(<?php echo $image; ?>)">
                     <div class="event_text">
