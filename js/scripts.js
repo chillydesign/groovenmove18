@@ -50,6 +50,25 @@
         // MASONRY GALLERY
 
 
+
+        // lAZY LOAD GALLERY IMAGES
+        // lAZY LOAD GALLERY IMAGES
+        $("img.lazy").lazyload({
+
+            load : function(elements_left, settings) {
+                if (msnry) {
+                    msnry.layout();
+                }
+
+            }
+
+        });
+        // lAZY LOAD GALLERY IMAGES
+        // lAZY LOAD GALLERY IMAGES
+
+
+
+
         /////////////////////////////////////////////////////////
         /// SLIDER
         /// SLIDER

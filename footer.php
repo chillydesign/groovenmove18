@@ -37,6 +37,7 @@
   <script type="text/javascript" src="<?php echo $tdu; ?>/js/slick.min.js?v=<?php echo wf_version(); ?>"></script>
   <script type="text/javascript" src="<?php echo $tdu; ?>/js/featherlight.min.js?v=<?php echo wf_version(); ?>"></script>
   <script type="text/javascript" src="<?php echo $tdu; ?>/js/masonry.pkgd.min?v=<?php echo wf_version(); ?>"></script>
+  <script type="text/javascript" src="<?php echo $tdu; ?>/js/jquery.lazyload?v=<?php echo wf_version(); ?>"></script>
   <script type="text/javascript" src="<?php echo $tdu; ?>/js/scripts.js?v=<?php echo wf_version(); ?>"></script>
 
     <script>

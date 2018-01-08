@@ -25,6 +25,7 @@
   "dependencies": {
     "featherlight": "^1.7.12",
     "jquery": "^3.2.1",
+    "jquery-lazyload": "^1.9.7",
     "masonry-layout": "^4.2.1",
     "slick-carousel": "^1.8.1"
   },
