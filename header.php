@@ -20,10 +20,10 @@
     <body <?php body_class(); ?>>
 
 
-        <nav>
-          <a href="#" id="menu_button">Menu</a>
+        <nav id="site_nav">
+
           <div class="container">
-            <ul id="site_nav">
+            <ul >
                 <?php if( !is_front_page() ) : ?>
                     <li class="branding"><a href="<?php echo get_home_url(); ?>"><?php echo $blog_name; ?></a></li>
                 <?php endif; ?>
@@ -33,16 +33,4 @@
 
         </nav>
 
-
-
-
-        <!--
-        <header class="header" id="header">
-        <div class="container">
-
-        <a href="<?php echo home_url(); ?>" class="branding"><?php bloginfo('name'); ?></a>
-
-        <a href="#" id="menu_button" >Menu</a>
-    </div>
-</header>
--->
+          <a href="#" id="menu_button">Menu</a>

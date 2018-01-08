@@ -21,8 +21,19 @@
         var $menu_button = $('#menu_button');
         $menu_button.on('click', function(e){
           e.preventDefault();
-          $site_nav.toggle();
+          $site_nav.toggleClass('show_nav');
+        })
 
+        var $submenus = $('.sub-menu');
+        $('.menu-item-has-children').each(function(){
+            var $this = $(this);
+            $this.append('<i class="fa fa-caret-down expander" aria-hidden="true"></i>');
+
+            $('.expander', $this).click(function(e){
+                e.preventDefault();
+                $submenus.hide();
+                $this.find('ul').show();
+            })
         })
 
 
