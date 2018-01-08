@@ -32,18 +32,15 @@
         // MASONRY GALLERY
         // MASONRY GALLERY
         // MASONRY GALLERY
-        var grid = document.querySelector('.gallery_images');
-        if (grid) {
-            var msnry = new Masonry( grid, {
-                // options...
+        var $grid =  $('.grid');
+        if ($grid.length) {
+            $('.grid').masonry({
                 itemSelector: '.gallery_image',
                 percentPosition: true,
                 gutter: 10
             });
-
-            setTimeout( function(){ msnry.layout(); }, 100 );
-            setTimeout( function(){ msnry.layout(); }, 250 );
-
+            setTimeout( function(){ $('.grid').masonry('layout'); }, 100 );
+            setTimeout( function(){ $('.grid').masonry('layout'); }, 250 );
         }
         // MASONRY GALLERY
         // MASONRY GALLERY
