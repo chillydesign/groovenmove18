@@ -2,44 +2,74 @@ nav {
 
     background: $brand_color;
     text-align: center;
-     ul {
-         padding: 0;
-         margin:0;
-         li {
-             display: inline-block;
-             padding: 0;
-             margin:0;
-             font-weight: bold;
-             text-transform: uppercase;
-             font-size: 1.3em;
-              a {
-                  display: inline-block;
-                  padding: 15px 10px;
-                  transition:  all 0.3s;
-                  &:link, &:active,  &:visited {
-                      color: $black;
-                  }
-                  &:hover {
-                      color: $brand_color;
-                      background-color: $black;
-                  }
-              }
-              &.branding {
-                  a {
-                      text-indent: -9999px;
-                      background-image: url('../img/logo_black.svg');
-                      background-repeat: no-repeat;
-                      background-position: center center;
-                      background-size: 80px;
-                      width: 100px;
+    ul {
+        padding: 0;
+        margin:0;
+        li {
+            display: inline-block;
+            padding: 0;
+            margin:0;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.3em;
+            position: relative;
 
-                      &:hover {
-                           background-image: url('../img/logo.svg');
-                      }
+            a {
+                display: inline-block;
+                padding: 15px 10px;
+                transition:  all 0.3s;
+                &:link, &:active,  &:visited {
+                    color: $black;
+                }
+                &:hover {
+                    color: $brand_color;
+                    background-color: $black;
+                }
+            }
 
 
-                  }
-              }
-         }
-     }
+            ul {
+                display: none;
+                position: absolute;
+                z-index: 100;
+                top:48px;
+                left: 0;
+                width: 300px;
+                background: darken($brand_color,5);
+                text-align: left;
+                li {
+                    font-size: 0.8em;
+                    display: block;
+                    a {
+                        padding:10px 10px;
+                        display: block;
+                    }
+                }
+            }
+
+            &:hover {
+                ul {
+                    display: inline-block;
+                }
+            }
+
+
+            &.branding {
+                a {
+                    text-indent: -9999px;
+                    background-image: url('../img/logo_black.svg');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 80px;
+                    width: 100px;
+
+                    &:hover {
+                        background-image: url('../img/logo.svg');
+                    }
+
+
+                }
+            }
+        }
+    }
 }
