@@ -14,6 +14,17 @@
             $('body').addClass('browser_ie_or_edge');
         };
 
+        $('.gf_browser_chrome gform_wrapper').show();
+
+        function event_title_height(){
+          var $event_title = $('.event_title');
+          var $event_title_height = $event_title.outerHeight() * -0.5;
+          $event_title.css({'bottom' : $event_title_height});
+        }
+        event_title_height();
+        $(window).on('resize', function () {
+            event_title_height();
+        });
 
 
         /////////////////////////////////////////////////////////

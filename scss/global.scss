@@ -38,6 +38,24 @@ img {
 }
 
 
+h2.partenaires_h2 {font-size: 2.8em; text-align: center;margin-bottom: 30px;}
+ul.partenaires {margin-bottom:50px;}
+.gallery_partenaires {
+    background: white;
+    width: calc(25% - 25px);
+    min-width: 130px;
+    padding: 10px;
+    display: inline-block;
+    margin: 10px;
+    border: solid 1px #ddd;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: all ease-in-out 0.2s;
+    a{border-bottom: 0;}
+    &:hover {
+      transform: scale(1.1);
+    }
+}
+
 @import "header";
 @import "footer";
 @import "social_bar";
