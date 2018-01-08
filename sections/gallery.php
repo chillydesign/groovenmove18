@@ -1,14 +1,28 @@
-<?php $titre =  get_sub_field('titre'); ?>
 <?php $images =  get_sub_field('images'); ?>
+<?php $tdu = get_template_directory_uri(); ?>
+<?php $image_array = []; ?>
+<?php
+foreach( $images as $image ):
+    $str = '<li  class="gallery_image">';
+    $str .= '<a data-featherlight="image"  class="gallery"  href="'. $image['url'] . '">';
+    $str .= '<img width="' . $image['sizes']['medium-width'] . '" height="' . $image['sizes']['medium-height'] . '" class="lazy" data-original="' . $image['sizes']['medium'] . '"  alt="" />';
+    $str .= '<img  src="' . $tdu . '/img/chevron_bg.svg" class="gallery_blob" />';
+    $str .= '</a>';
+    $str .= '</li>';
+    array_push($image_array, $str);
+endforeach;
 
 
-<?php if($titre){echo'<h2>' . $titre . '</h2>';} ?>
-<ul class="gallery_slider ">
-	<?php  foreach ($images as $image) : ?>
-	<li  class="gallery_image">
-		 <a class=""  href="<?php echo $image['sizes']['large']; ?>">
-            <div style="background-image:url(<?php echo $image['sizes']['small_height']; ?>);" ></div>
-         </a>
-	</li>
-	<?php endforeach; ?>
-</ul>
+shuffle($image_array);
+
+?>
+
+
+
+<div class="container">
+
+    <ul class="gallery_images ">
+        <?php echo implode($image_array, " "); ?>
+    </ul>
+
+</div>

@@ -27,10 +27,33 @@
         });
 
 
+
+
+        // MASONRY GALLERY
+        // MASONRY GALLERY
+        // MASONRY GALLERY
+        var grid = document.querySelector('.gallery_images');
+        if (grid) {
+            var msnry = new Masonry( grid, {
+                // options...
+                itemSelector: '.gallery_image',
+                percentPosition: true,
+                gutter: 10
+            });
+
+            setTimeout( function(){ msnry.layout(); }, 100 );
+            setTimeout( function(){ msnry.layout(); }, 250 );
+
+        }
+        // MASONRY GALLERY
+        // MASONRY GALLERY
+        // MASONRY GALLERY
+
+
         /////////////////////////////////////////////////////////
-        /// GALLERY
-        /// GALLERY
-        /// GALLERY
+        /// SLIDER
+        /// SLIDER
+        /// SLIDER
         var $gallery_sliders = $(".gallery_slider");
         $gallery_sliders.slick({
             dots: true,
@@ -41,9 +64,9 @@
             variableWidth: false
         });
 
-        /// END OF GALLERY
-        /// END OF GALLERY
-        /// END OF GALLERY
+        /// END OF SLIDER
+        /// END OF SLIDER
+        /// END OF SLIDER
 
 
         /////////////////////////////////////////////////////////
