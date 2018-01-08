@@ -25,6 +25,17 @@ section {
 }
 
 iframe {width: 100%;}
+p iframe {
+    margin-top: -20px;
+}
+h2 + p>iframe {
+    margin-top: 5px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
 
 
 @import "header";

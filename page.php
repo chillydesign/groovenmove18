@@ -13,11 +13,11 @@
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<?php include('section-loop.php'); ?>
+
 
 
 			<div class="container">
-				<?php the_content(); ?>
+				<?php include('section-loop.php'); ?>
 				<?php // comments_template( '', true ); // Remove if you don't want comments ?>
 				<?php edit_post_link(); ?>
 			</div>

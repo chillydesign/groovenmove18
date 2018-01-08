@@ -1,6 +1,7 @@
 <?php $events = new WP_Query(array(
     'post_type' => 'evenement',
-    'posts_per_page' => -1
+    'posts_per_page' => -1,
+    'orderby' => 'menu_order'
 ));
 
 
@@ -34,14 +35,16 @@
 
                 </div>
                 <div class="filter_container">
-                    <h4>Cateogie</h4>
+                    <h4>Catégorie</h4>
                     <div class="filter_items has_potential_filter_items">
                         <div class="current_filter_item"><div class="fake_filter_item">Toutes </div>&#9660;</div>
                         <div class="potential_filter_items">
                             <div class="filter_item">Toutes</div>
-                            <div class="filter_item" data-group="jiving">jiving</div>
-                            <div class="filter_item" data-group="dancing">dancing</div>
-                            <div class="filter_item" data-group="twisting">twisting</div>
+                            <div class="filter_item" data-group="soiree-spectacle">Soirée spectacle</div>
+                            <div class="filter_item" data-group="battle-de-danse">Battle de danse</div>
+                            <div class="filter_item" data-group="stage">Stage</div>
+                            <div class="filter_item" data-group="projection">Projection</div>
+                            <div class="filter_item" data-group="soiree-clubbing">Soirée clubbing</div>
                         </div>
                     </div>
 
@@ -71,7 +74,7 @@
                 foreach ($dates as $date) {
                     $date_timestamp = strtotime( $date['date'] );
                     $date_as_date = strftime('%Y-%m-%d', $date_timestamp);
-                    $date_as_text = strftime('%A %d %B', $date_timestamp);
+                    $date_as_text = strftime('%a %d %B', $date_timestamp);
                     array_push($dates_as_date, $date_as_date);
                     array_push($date_text, $date_as_text);
                 };
@@ -82,7 +85,7 @@
 
                     <div class="event_text">
                         <h3><?php echo get_the_title(); ?></h3>
-                        <p class="event_date"><?php echo implode(',', $date_text) ?></p>
+                        <p class="event_date"><?php echo implode(' - ', $date_text) ?></p>
                         <p class="event_excerpt"><?php echo get_the_excerpt(); ?></p>
                     </div>
 

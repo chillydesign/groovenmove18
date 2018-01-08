@@ -42,7 +42,8 @@ a {
 
     text-decoration: none;
     transition: all 0.3s;
-    color: $brand_color;
+    color: $font_color;
+    border-bottom: solid 1px $brand_color;
 
     &:hover {
         text-decoration: none;
@@ -55,7 +56,7 @@ hr {
     border-top: 4px solid $brand_color;
     outline:0;
     appearance: none;
-    margin:30px 0;
+    margin:10px 0 30px;
     padding: 0;
 }
 

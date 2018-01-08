@@ -32,8 +32,8 @@
                         <div class="col-sm-8">
                         <div class="floatdiv floatleftdiv"><?php include('doublechevron.svg'); ?></div>
                         <div class="floatdiv floatrightdiv">
-                          <h1><?php if($artiste_principal){ echo $artiste_principal . ' - ';} ?>
-                            <?php the_title(); ?></h1>
+                          <h1>
+                            <?php the_title(); ?><?php if($artiste_principal){ echo ' - ' . $artiste_principal;} ?></h1>
                           <p>
                             <?php echo implode(' - ', $event_metas); ?>
                             <?php if($sous_titre){echo '<br><span class="subtitle">' . $sous_titre . '</span>';} ?>

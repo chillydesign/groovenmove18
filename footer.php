@@ -33,10 +33,10 @@
         <p id="copyright">&copy; <?php echo date('Y'); ?> Festival Groove'N'Move | Website by <a href="//webfactor.ch" title="Webfactor">Webfactor</a></p>
     </footer>
 
-
+  <script type="text/javascript" src="<?php echo $tdu; ?>/js/min/scripts.bundle.js?v=<?php echo wf_version(); ?>"></script>
     <?php wp_footer(); ?>
 
-    <script type="text/javascript" src="<?php echo $tdu; ?>/js/min/scripts.bundle.js?v=<?php echo wf_version(); ?>"></script>
+
     <script>
     // (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
     // (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),

@@ -3,6 +3,7 @@
 $dancing_man_width:  400px;
 
 $logo_width: 300px;
+@media(max-width: 600px){$logo_width: 240px;}
 $chevron_left_width: 200px;
 $chevron_left_height: 500px;
 $chevron_right_width: 200px;
@@ -65,6 +66,7 @@ $chevron_right_height: 400px;
 
     #logo {
         top: 50px;
+        @media(max-width: 600px){left: -20px;}
         position: relative;
         transform: translateX( -80% );
         animation: logoToCenter 2s forwards;
@@ -89,6 +91,7 @@ $chevron_right_height: 400px;
             transform: translateX( 100% );
             animation: datesToCenter 2.5s forwards;
             animation-delay: 1.5s;
+            @media(max-width: 600px){right: 10px; font-size: 2.6em;}
 
             span {
                 background: $black;
@@ -106,6 +109,7 @@ $chevron_right_height: 400px;
             font-size: 2.3em;
             top: 60px;
             left: 25px;
+            @media(max-width: 600px){left: 5px; font-size: 1.9em;}
             text-transform: uppercase;
         }
 
@@ -198,14 +202,20 @@ $chevron_right_height: 400px;
 
 
     .filters_container_inner {
-        display: flex;
-        flex-wrap:nowrap;
-        align-items: center;
-        justify-content: center;
+
+      @media(min-width: 650px){
+          display: flex;
+          flex-wrap:nowrap;
+          align-items: center;
+          justify-content: center;
+        }
+
         text-transform: uppercase;
 
         .filter_container {
-            flex:1  auto 0;
+            @media(min-width: 650px){
+              flex:1  auto 0;
+            }
             padding: 0 20px ;
             h4 {
                 color: $medium_grey;
@@ -217,7 +227,10 @@ $chevron_right_height: 400px;
 
 
             .filter_items {
-                margin:0 -10px;
+                margin:0 -10px 10px;
+                @media(min-width: 650px){
+                    margin:0 -10px;
+                }
 
                 &.has_potential_filter_items {
                     position: relative;
@@ -226,7 +239,8 @@ $chevron_right_height: 400px;
                     .potential_filter_items {
                         display: none;
                         position: absolute;
-                        top:25px;
+                        top:45px;
+                        width: 180px;
                         background: transparentize(black,0.1);
                         color: white;
                         padding:10px;
@@ -356,7 +370,7 @@ $event_transition_time: 0.5s;
 
 
         .event_text {
-            padding: $event_text_padding;
+            padding: 15px $event_text_padding;
             background: transparentize(black, 0.5);
             position: absolute;
             height: 100%;
@@ -377,6 +391,7 @@ $event_transition_time: 0.5s;
 
                 &.event_date {
                     opacity: 0.5;
+                    text-transform: uppercase;
                 }
                 &.event_excerpt {
                     opacity: 0;
