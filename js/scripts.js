@@ -1,4 +1,4 @@
-import slick from '../node_modules/slick-carousel/slick/slick.min.js';
+
 
 (function ($, root, undefined) {
 

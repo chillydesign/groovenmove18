@@ -32,8 +32,9 @@
 
         <p id="copyright">&copy; <?php echo date('Y'); ?> Festival Groove'N'Move | Website by <a href="//webfactor.ch" title="Webfactor">Webfactor</a></p>
     </footer>
-
-  <script type="text/javascript" src="<?php echo $tdu; ?>/js/min/scripts.bundle.js?v=<?php echo wf_version(); ?>"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="<?php echo $tdu; ?>/js/slick.min.js?v=<?php echo wf_version(); ?>"></script>
+  <script type="text/javascript" src="<?php echo $tdu; ?>/js/scripts.js?v=<?php echo wf_version(); ?>"></script>
     <?php wp_footer(); ?>
 
 
