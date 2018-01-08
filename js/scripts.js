@@ -14,7 +14,20 @@
             $('body').addClass('browser_ie_or_edge');
         };
 
-        $('.gf_browser_chrome gform_wrapper').show();
+
+
+        //
+        var $site_nav = $('#site_nav');
+        var $menu_button = $('#menu_button');
+        $menu_button.on('click', function(e){
+          e.preventDefault();
+          $site_nav.toggle();
+
+        })
+
+
+
+
 
         function event_title_height(){
           var $event_title = $('.event_title');
@@ -25,6 +38,9 @@
         $(window).on('resize', function () {
             event_title_height();
         });
+
+        $('.gallery_editions').matchHeight();
+
 
 
 

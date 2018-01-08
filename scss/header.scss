@@ -1,75 +1,139 @@
+$nav_a_padding: 15px 10px;
+
+#menu_button {
+  display: block;
+  padding: $nav_a_padding;
+  transition:  all 0.3s;
+  background: url('../img/menu.svg') no-repeat center center;
+  background-size: 30px;
+  height: 50px;
+  text-indent: -9999px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
 nav {
 
-    background: $brand_color;
-    text-align: center;
-    ul {
-        padding: 0;
-        margin:0;
-        li {
-            display: inline-block;
-            padding: 0;
-            margin:0;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 1.3em;
-            position: relative;
-
-            a {
-                display: inline-block;
-                padding: 15px 10px;
-                transition:  all 0.3s;
-                &:link, &:active,  &:visited {
-                    color: $black;
-                }
-                &:hover {
-                    color: $brand_color;
-                    background-color: $black;
-                }
-            }
+  background: $brand_color;
+  text-align: center;
 
 
-            ul {
-                display: none;
-                position: absolute;
-                z-index: 100;
-                top:48px;
-                left: 0;
-                width: 300px;
-                background: darken($brand_color,5);
-                text-align: left;
-                li {
-                    font-size: 0.8em;
-                    display: block;
-                    a {
-                        padding:10px 10px;
-                        display: block;
-                    }
-                }
-            }
-
-            &:hover {
-                ul {
-                    display: inline-block;
-                }
-            }
+  ul {
+    padding: 0;
+    margin:0;
 
 
-            &.branding {
-                a {
-                    text-indent: -9999px;
-                    background-image: url('../img/logo_black.svg');
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: 80px;
-                    width: 100px;
+    display: none;
 
-                    &:hover {
-                        background-image: url('../img/logo.svg');
-                    }
-
-
-                }
-            }
-        }
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
     }
+
+
+    li {
+      display: block;
+      padding: 0;
+      margin:0;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.3em;
+      position: relative;
+
+
+
+
+      @media (min-width: 768px) {
+        flex: 1;
+        display: inline-block;
+
+        &:hover {
+          ul {
+            display: inline-block;
+          }
+        }
+      }
+
+
+      a {
+        display: block;
+        padding: $nav_a_padding;
+        transition:  all 0.3s;
+        &:link, &:active,  &:visited {
+          color: $black;
+        }
+        &:hover {
+          color: $brand_color;
+          background-color: $black;
+        }
+      }
+
+
+      ul {
+
+
+        display: flex;
+        flex-wrap: wrap;
+
+
+
+        @media (min-width: 768px) {
+          position: absolute;
+          z-index: 100;
+          top:48px;
+          left: 0;
+          width: 300px;
+            display: none;
+              text-align: left;
+        background: darken($brand_color,5);
+
+        }
+
+
+        li {
+          font-size: 0.8em;
+          display: block;
+          flex:1 auto 0;
+          width: 50%;
+          min-width: 50%;
+
+                  @media (min-width: 768px) {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+                  }
+          a {
+            padding:10px 10px;
+            display: block;
+          }
+        }
+      }
+
+
+
+
+      &.branding {
+        a {
+          text-indent: -9999px;
+          background-image: url('../img/logo_black.svg');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 80px;
+          width: 100%;
+
+          &:hover {
+            background-image: url('../img/logo.svg');
+          }
+
+
+          @media (min-width: 768px) {
+            width: 100px;
+          }
+
+
+        }
+      }
+    }
+  }
 }

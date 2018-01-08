@@ -2,8 +2,15 @@
 <?php $tdu = get_template_directory_uri(); ?>
 
 <article>
+	<?php if(has_post_thumbnail()){
+		$img_bg = get_the_post_thumbnail_url();
+		$style="";
+	} else {
+		$img_bg = $tdu . '/img/man.jpg';
+		$style=" background-size: contain; background-position: center center; background-color: black;";
+	} ?>
 
-		<header  class="event_header"  style="background-image:url(<?php echo $tdu; ?>/img/man.jpg); background-size: contain; background-position: center right 20%; background-color: black;">
+		<header  class="event_header"  style="background-image:url(<?php echo $img_bg; ?>); <?php echo $style; ?>">
 				<div class="event_title">
 						<div class="container">
 								<div class="row">

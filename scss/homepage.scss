@@ -203,7 +203,7 @@ $chevron_right_height: 400px;
 
     .filters_container_inner {
 
-      @media(min-width: 650px){
+      @media(min-width: 767px){
           display: flex;
           flex-wrap:nowrap;
           align-items: center;
@@ -213,7 +213,7 @@ $chevron_right_height: 400px;
         text-transform: uppercase;
 
         .filter_container {
-            @media(min-width: 650px){
+            @media(min-width: 767px){
               flex:1  auto 0;
             }
             padding: 0 20px ;
@@ -228,7 +228,7 @@ $chevron_right_height: 400px;
 
             .filter_items {
                 margin:0 -10px 10px;
-                @media(min-width: 650px){
+                @media(min-width: 767px){
                     margin:0 -10px;
                 }
 

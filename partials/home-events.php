@@ -14,16 +14,23 @@
     <div id="filters_container">
         <div class="container">
             <div class="filters_container_inner">
-                <div class="filter_container">
-                    <h4>Feb</h4>
-                    <div class="filter_items">
-                        <div class="filter_item" data-group="2018-02-24">24</div>
-                        <div class="filter_item" data-group="2018-02-25">25</div>
-                        <div class="filter_item" data-group="2018-02-26">26</div>
-                        <div class="filter_item" data-group="2018-02-27">27</div>
-                    </div>
+              <div class="filter_container">
+                  <h4>Jan</h4>
+                  <div class="filter_items">
+                      <div class="filter_item" data-group="2018-01-21">21</div>
+                  </div>
 
-                </div>
+              </div>
+              <div class="filter_container">
+                  <h4>Feb</h4>
+                  <div class="filter_items">
+                      <div class="filter_item" data-group="2018-02-24">24</div>
+                      <div class="filter_item" data-group="2018-02-25">25</div>
+                      <div class="filter_item" data-group="2018-02-26">26</div>
+                      <div class="filter_item" data-group="2018-02-27">27</div>
+                  </div>
+
+              </div>
                 <div class="filter_container">
                     <h4>Mar</h4>
                     <div class="filter_items">

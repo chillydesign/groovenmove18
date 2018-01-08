@@ -56,6 +56,43 @@ ul.partenaires {margin-bottom:50px;}
     }
 }
 
+li.gallery_editions {
+    display: inline-block;
+    width: calc(100% - 42px);;
+    @media(min-width: 600px){width: calc(50% - 42px);}
+    @media(min-width: 992px){width: calc(33% - 42px);}
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    vertical-align: top;
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    a.programme, a.website {
+        display: block;
+        border: 0;
+        text-align: center;
+        text-transform: uppercase;
+        background: $brand_color;
+        margin: 10px 0 0;
+        padding: 5px;
+        border-radius: 5px;
+        &:hover {
+          background-color: darken($brand_color, 12);
+        }
+    }
+    a.programme {
+      background: #ddd;
+      margin-bottom: 10px;
+      &:hover {
+        background: #ccc;
+      }
+    }
+}
+
+
 @import "header";
 @import "footer";
 @import "social_bar";

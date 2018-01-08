@@ -21,13 +21,18 @@
 
 
         <nav>
-            <ul>
+          <a href="#" id="menu_button">Menu</a>
+          <div class="container">
+            <ul id="site_nav">
                 <?php if( !is_front_page() ) : ?>
                     <li class="branding"><a href="<?php echo get_home_url(); ?>"><?php echo $blog_name; ?></a></li>
                 <?php endif; ?>
                 <?php chilly_nav('primary-navigation'); ?>
             </ul>
+            </div>
+
         </nav>
+
 
 
 
