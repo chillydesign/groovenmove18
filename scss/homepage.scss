@@ -91,7 +91,7 @@ $chevron_right_height: 400px;
             transform: translateX( 100% );
             animation: datesToCenter 2.5s forwards;
             animation-delay: 1.5s;
-            @media(max-width: 600px){right: 10px; font-size: 2.6em;}
+            @media(max-width: 600px){right: 10px; font-size: 2.6em;transform: translateX( 110% );}
 
             span {
                 background: $black;
@@ -348,6 +348,7 @@ $event_transition_time: 0.5s;
         opacity: 1;
         animation: growChevron 1s forwards;
         transition: all 1s;
+        border-bottom: 0;
 
         &.invisible_event {
             width: 0;
