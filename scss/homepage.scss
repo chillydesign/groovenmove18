@@ -263,13 +263,16 @@ $chevron_right_height: 400px;
                 }
 
                 .filter_item, .current_filter_item {
-                    font-size: 3em;
                     display: inline-block;
                     padding: 10px;
                     font-weight: bold;
                     transition: all 0.3s;
                     opacity: 0.8;
                     cursor: pointer;
+                    font-size: 2em;
+                    @media(min-width: 1000px){
+                        font-size: 3em;
+                    }
 
                     &:hover {
                         transform: scale(1.1);

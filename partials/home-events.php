@@ -18,6 +18,8 @@
                   <h4>Jan</h4>
                   <div class="filter_items">
                       <div class="filter_item" data-group="2018-01-21">21</div>
+                      <div class="filter_item" data-group="2018-01-22">22</div>
+                      <div class="filter_item" data-group="2018-01-23">23</div>
                   </div>
 
               </div>
@@ -103,9 +105,9 @@
                 <?php $tdu = get_template_directory_uri(); ?>
                 <a  target="_blank" data-groups='[]' href="<?php echo wp_upload_dir()['baseurl']; ?>/2018/01/programme_gnm2018_bon_a_tirer-1.pdf"  class="single_event"   style="background-image: url(<?php echo $tdu . '/img/man.jpg'; ?>);">
                     <div class="event_text">
-                        <h3>Download the brochure</h3>
-                        <p class="event_date">Download it now</p>
-                        <p class="event_excerpt">Some extra text here. Some extra text here. Some extra text here. Some extra text here. Some extra text here. Some extra text here. Some extra text here. </p>
+                        <h3>Brochure GNM 2018</h3>
+                        <p class="event_date"></p>
+                        <p class="event_excerpt"><br>Téléchager le programme complet du Festival Groove'N'Move 2018.</p>
                     </div>
                     <div class="single_event_inner"></div>
                 </a>
