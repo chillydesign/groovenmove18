@@ -65,9 +65,6 @@
 
 
     <div class="container">
-
-
-
         <div class="events_container">
 
             <?php $ev = 0; while($events->have_posts()) : $events->the_post();  ?>
@@ -101,10 +98,18 @@
 
                 </a>
 
-
-
-
                 <?php $ev++; endwhile; ?>
+
+                <?php $tdu = get_template_directory_uri(); ?>
+                <a  target="_blank" data-groups='[]' href="<?php echo wp_upload_dir()['baseurl']; ?>/2018/01/programme_gnm2018_bon_a_tirer-1.pdf"  class="single_event"   style="background-image: url(<?php echo $tdu . '/img/man.jpg'; ?>);">
+                    <div class="event_text">
+                        <h3>Download the brochure</h3>
+                        <p class="event_date">Download it now</p>
+                        <p class="event_excerpt">Some extra text here. Some extra text here. Some extra text here. Some extra text here. Some extra text here. Some extra text here. Some extra text here. </p>
+                    </div>
+                    <div class="single_event_inner"></div>
+                </a>
+
 
             </div>
         </div>
