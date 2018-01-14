@@ -8,7 +8,7 @@
 
 
 <?php if($titre): ?>
-    <h2 class="partenaires_h2"><?php echo $titre; ?></h2>
+    <h2><?php echo $titre; ?></h2>
 <?php endif; ?>
 
 
@@ -25,12 +25,12 @@
         <div  class="biography_outer <?php echo $id; ?>" >
 
             <a href="#" data-featherlight="#<?php echo $id; ?>">
-                <img src="<?php echo $image_small; ?>" alt="">
+                <div class="bio_div" style="background-image:url(<?php echo $image_small; ?>)"></div>
                 <h3><?php echo $nom; ?></h3>
             </a>
 
             <div id="<?php echo $id; ?>" class="biography_content">
-                <img src="<?php echo $image; ?>" alt="">
+                <!-- <img src="<?php echo $image; ?>" alt=""> -->
                 <h3><?php echo $nom; ?></h3>
                 <?php echo $description; ?>
             </div>
