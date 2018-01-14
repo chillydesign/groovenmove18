@@ -1,0 +1,12 @@
+.biographies {}
+.biography_outer {}
+.biography_content {
+
+    display: none;
+}
+
+.featherlight {
+    .biography_content {
+        display: block;
+    }
+}
