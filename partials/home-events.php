@@ -28,6 +28,7 @@
                       <div class="filter_item" data-group="2018-02-25">25</div>
                       <div class="filter_item" data-group="2018-02-26">26</div>
                       <div class="filter_item" data-group="2018-02-27">27</div>
+                      <div class="filter_item" data-group="2018-02-28">28</div>
                   </div>
 
               </div>

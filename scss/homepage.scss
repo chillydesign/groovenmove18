@@ -491,6 +491,7 @@ body.browser_ie_or_edge {
     .events_container {
         .single_event {
             transform: translate(0) !important;
+            border: solid 1px white;
             // TO DO  ONLY IF IE
             .single_event_inner {
                 position: absolute;

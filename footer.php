@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <p>Demande générale : <a href="mailto:contact@groove-n-move.ch">contact@groove-n-move.ch </a><br>
-                    Presse: <a href="mailto:presse@groove-n-move.ch">presse@groove-n-move.ch</a></p>
+                    Presse: <a href="mailto:communication@groove-n-move.ch">communication@groove-n-move.ch</a></p>
 
                 </div>
                 <div class="col-sm-4">
