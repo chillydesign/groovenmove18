@@ -17,10 +17,7 @@
                 </div>
                 <div class="col-sm-4">
                     <p>ABONNEZ-VOUS À LA NEWSLETTER</p>
-                    <form action="">
-                        <input type="text" placeholder="email" />
-                        <input type="submit" class="submit_button" id="subscribe_button" value="envoyer" />
-                    </form>
+                    <?php include('mailchimp.php'); ?>
 
 
                 </div>
@@ -49,6 +46,5 @@
     // ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
     // ga('send', 'pageview');
     </script>
-
 </body>
 </html>

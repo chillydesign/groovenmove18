@@ -90,7 +90,23 @@
         // lAZY LOAD GALLERY IMAGES
         // lAZY LOAD GALLERY IMAGES
 
+        // Events Ticketing Link
 
+        $('div.show_ticket_office').on('click', function(){
+          $('.ticket_office ').show();
+          $('body').css({
+            'overflow-y' : 'hidden',
+            'height' : '100vh'
+          });
+        })
+
+        $('.ticket_office  .close').on('click', function(){
+          $('.ticket_office ').hide();
+          $('body').css({
+            'overflow-y' : 'visible',
+            'height' : 'auto'
+          });
+        })
 
 
         /////////////////////////////////////////////////////////

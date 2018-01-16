@@ -93,6 +93,10 @@
                             <h3><i class="fa fa-ticket"></i> Tarifs</h3>
                             <?php echo $tarifs; ?>
                         <?php endif; ?>
+
+                        <?php if(get_field('ticketing_link')){ ?>
+                          <div class="show_ticket_office">Billetterie en ligne</div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -119,6 +123,11 @@
 </section>
 <!-- /section -->
 
-
+<?php if(get_field('ticketing_link')){ ?>
+<div class="ticket_office">
+  <div class="close">+</div>
+  <iframe id="etickets" src="<?php echo get_field('ticketing_link'); ?>" name="etickets" width="100%" height="952px" frameborder="0"></iframe>
+</div>
+<?php } ?>
 
 <?php get_footer(); ?>

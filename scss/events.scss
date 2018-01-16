@@ -95,3 +95,45 @@ $event_title_padding: 30px;
 }
 
 }
+
+
+div.show_ticket_office {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: solid 2px $brand_color;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+.ticket_office {
+  background: rgba(0,0,0,0.9);
+  padding: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  overflow: hidden;
+  display: none;
+  .close {
+    position: fixed;
+    right: 10px;
+    top: 0;
+    z-index: 10;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    transition: all ease-in-out 0.2s;
+    &:hover {
+      transform: scale(1.1) rotate(-45deg);
+    }
+  }
+  iframe {height: calc(100vh - 100px);}
+}
