@@ -50,7 +50,7 @@
                         <div class="current_filter_item"><div class="fake_filter_item">Toutes </div>&#9660;</div>
                         <div class="potential_filter_items">
                             <div class="filter_item">Toutes</div>
-                            <div class="filter_item" data-group="soiree-spectacle">Soirée spectacle</div>
+                            <div class="filter_item" data-group="soiree-spectacles">Soirée spectacle</div>
                             <div class="filter_item" data-group="battle-de-danse">Battle de danse</div>
                             <div class="filter_item" data-group="stage">Stage</div>
                             <div class="filter_item" data-group="projection">Projection</div>
@@ -73,6 +73,7 @@
 
                 <?php // $event_classes = get_event_chevron_classes($ev); // do this with js now
                 $event_id = get_the_ID();
+                $archive = get_field('archive');
                 $categories = get_the_terms($event_id, 'event_cat');
                 $categories_text = ($categories) ?  array_map(function($cat) { return $cat->slug;}, $categories  ): array();
                 $image = thumbnail_of_post_url(  $event_id , 'medium' );
@@ -88,7 +89,7 @@
                 $groups = array_merge($dates_as_date,$categories_text );
                 ?>
 
-                <a href="<?php echo get_the_permalink(); ?>" data-groups='["<?php echo implode('","', $groups) ?>"]'  class="single_event  <?php // echo $event_classes; ?>" style="background-image:url(<?php echo $image; ?>)">
+                <a href="<?php echo get_the_permalink(); ?>" data-groups='["<?php echo implode('","', $groups) ?>"]'  class="single_event  <?php // echo $event_classes; ?> <?php if(get_field('archive')){echo ' archive';}?>" style="background-image:url(<?php echo $image; ?>)">
 
                     <div class="event_text">
                         <h3><?php echo get_the_title(); ?></h3>

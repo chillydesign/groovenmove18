@@ -353,6 +353,8 @@ $event_transition_time: 0.5s;
         transition: all 1s;
         border-bottom: 0;
 
+        &.archive {filter: grayscale(1);}
+
         &.invisible_event {
             width: 0;
             max-width: 0;
