@@ -7,6 +7,25 @@
     <div id="bg_chevron_1"></div>
     <div id="bg_chevron_2"></div>
 
+<?php if(!isset($_COOKIE['popup'])): ?>
+
+    <div class="popup">
+      <div class="popup_inner">
+        <div class="close"><span>+</span></div>
+        <h2>Merci à tous pour votre participation ! <div class="endpoint"><?php include('endpoint.svg'); ?></div></h2>
+
+        <div class="inner_box">
+          <h3>Retrouvez l'essentiel du festival 2018 en vidéo</h3>
+          <iframe width="560" height="315" margin-bottom:"20px" src="https://www.youtube.com/embed/Z7gtfSZ3xrs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+          <h3>Au plaisir de vous retrouver pour l'édition 2019!</h3>
+        </div>
+
+      </div>
+  </div>
+<?php setcookie('popup', 'true', time()+86400, '/'); ?>
+<?php endif; ?>
+
 <footer>
     <div class="container">
         <div class="row">
@@ -38,13 +57,6 @@
   <script type="text/javascript" src="<?php echo $tdu; ?>/js/jquery.matchHeight.js?v=<?php echo wf_version(); ?>"></script>
   <script type="text/javascript" src="<?php echo $tdu; ?>/js/scripts.js?v=<?php echo wf_version(); ?>"></script>
 
-    <script>
-    // (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-    // (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-    // l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
-    // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    // ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
-    // ga('send', 'pageview');
-    </script>
+
 </body>
 </html>

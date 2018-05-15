@@ -3,7 +3,9 @@
 (function ($, root, undefined) {
 
     $(function () {
-
+      $(' .popup .close').on('click', function(){
+        $(' .popup').hide();
+      })
 
 
 

@@ -56,3 +56,11 @@ button.featherlight-close-icon.featherlight-close {
       transform: rotate(90deg) scale(1.2);
     }
 }
+
+.single-evenement {
+  .featherlight {
+    background:#00ffff!important;
+  }
+  .featherlight-content {background:#00ffff; margin:0; border:0; padding:0;}
+  .biography_content {position:relative;}
+}

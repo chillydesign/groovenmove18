@@ -89,7 +89,7 @@ function webfactor_nav()
 }
 
 function wf_version(){
-  return '0.0.7';
+  return '0.1.0';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -594,5 +594,33 @@ function wrap_gform_cdata_close( $content = '' ) {
  $content = ' }, false );';
  return $content;
 }
+function social_meta_properties(){
+
+    $smp =  new stdClass();
+    global $post;
+
+    if (is_single()) {
+
+        $post_id = get_the_ID();
+        $excerpt  =  get_the_excerpt();
+        if ($excerpt == '') $excerpt =  wp_trim_words($post->post_content,20);
+        $smp->title = get_the_title();
+        $smp->description = $excerpt;
+        $smp->image =  thumbnail_of_post_url( $post_id, 'medium' );
+        $smp->url = get_the_permalink();
+
+    } else {
+        $smp->title = "Festival Groove'N'Move";
+        $smp->description = get_bloginfo('description');
+        $smp->image =   get_template_directory_uri() . '/img/gnm.jpg';
+        $smp->url = get_home_url();
+    }
+
+
+    return $smp;
+
+
+}
+
 
 ?>
