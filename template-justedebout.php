@@ -51,7 +51,7 @@
                             <h3><i class="fa fa-map-marker"></i> <?php echo $location->post_title; ?></h3>
                             <p><?php echo $display_address; ?></p>
                             <div id="map_container"></div>
-                            <script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyC-BDJZU14ltCrYRPei33a4ZSQfJqRbxNY&#038;ver=4.8.1'></script>
+                            <script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyC3RS38lnSUazn-fT-DUG69mF6RS3-IQI0&#038;ver=4.8.1'></script>
                             <script type="text/javascript">
                                 var place_location = '<?php echo $address //TODO replace any ; ?>';
                             </script>
